@@ -21,30 +21,34 @@ function addTodo(event) {
   // Todo DIV
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
+  if (todoInput.value === "") {
+    alert("Input-Field Cannot be empty");
+  } else {
+    // Create LI
+    newTodo = document.createElement("li");
+    newTodo.innerText = todoInput.value;
+    newTodo.classList.add("todo-item");
 
-  // Create LI
-  const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;
-  newTodo.classList.add("todo-item");
-  todoDiv.appendChild(newTodo);
+    todoDiv.appendChild(newTodo);
 
-  // Checkmarked button
-  const completedButton = document.createElement("button");
-  completedButton.innerHTML = '<i class= "fas fa-check"></i>';
-  completedButton.classList.add("complete-btn");
-  todoDiv.appendChild(completedButton);
+    // Checkmarked button
+    const completedButton = document.createElement("button");
+    completedButton.innerHTML = '<i class= "fas fa-check"></i>';
+    completedButton.classList.add("complete-btn");
+    todoDiv.appendChild(completedButton);
 
-  //Delete Button
-  const trashButton = document.createElement("button");
-  trashButton.innerHTML = '<i class= "fas fa-trash"></i>';
-  trashButton.classList.add("trash-btn");
-  todoDiv.appendChild(trashButton);
+    //Delete Button
+    const trashButton = document.createElement("button");
+    trashButton.innerHTML = '<i class= "fas fa-trash"></i>';
+    trashButton.classList.add("trash-btn");
+    todoDiv.appendChild(trashButton);
 
-  // Append TO LIST
-  todoList.appendChild(todoDiv);
+    // Append TO LIST
+    todoList.appendChild(todoDiv);
 
-  //Clear Todo Input Value
-  todoInput.value = "";
+    //Clear Todo Input Value
+    todoInput.value = "";
+  }
 }
 
 function deleteCheck(e) {
@@ -93,4 +97,10 @@ function filterTodo(e) {
         break;
     }
   });
+}
+
+// Adding todo item to local storage
+
+function addToLocalStorage() {
+  localStorage.setItem("Todo", newTodo);
 }
