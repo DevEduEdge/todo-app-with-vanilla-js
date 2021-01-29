@@ -1,0 +1,22 @@
+{
+  "name": "todo-app-with-vanilajs",
+  "version": "1.0.0",
+  "description": "Todo-App with vanila JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BixBee96/todo-app-with-vanilla-js.git"
+  },
+  "author": "Bhavesh Bhimte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BixBee96/todo-app-with-vanilla-js/issues"
+  },
+  "homepage": "https://github.com/BixBee96/todo-app-with-vanilla-js#readme",
+  "dependencies": {
+    "firebase-admin": "^9.4.2"
+  }
+}

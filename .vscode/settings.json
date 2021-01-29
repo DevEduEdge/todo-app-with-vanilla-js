@@ -10,5 +10,6 @@
     "selector",
     "selectors",
     "todo"
-  ]
+  ],
+  "liveServer.settings.port": 5500
 }
