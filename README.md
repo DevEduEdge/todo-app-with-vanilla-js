@@ -14,6 +14,6 @@ Workflow for project
 
 # merge from main/master/origin branch commands
 
-git checkout featureBranch ______________ # gets you "on branch to want to merge with main "
-git fetch origin ________________________ # gets you up to date with origin
-git merge origin/master
+1. git checkout featureBranch ******\_\_****** # gets you "on branch to want to merge with main "
+2. git fetch origin **********\_\_\_\_********** # gets you up to date with origin
+3. git merge origin/master
